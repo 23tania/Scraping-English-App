@@ -1,11 +1,13 @@
 import mysql.connector
 from mysql.connector import Error
-
+import os
+from dotenv import load_dotenv
 import Constants.Variables as Variables
 
 # ŁĄCZENIE Z BAZĄ MYSQL W AZURE
 def connect_to_db():
-    conn = mysql.connector.connect(user="azureuser", password="Zaq12wsx", host="serwerek.mysql.database.azure.com", port=3306, database="pracka")
+    load_dotenv()
+    conn = mysql.connector.connect(user = os.environ.get('DBUSER'), password = os.environ.get("DBPASS"), host = os.environ.get('DBHOST'), port = 3306, database = os.environ.get('DBNAME'))
     return conn
 
 # DODANIE NOWEJ LEKCJI

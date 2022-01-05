@@ -14,7 +14,6 @@ def main():
     scrape_lessons_ingless()
     scrape_words_ingless()
     scrape_school_subjects()
-
     # update_description() # AKTUALIZACJA OPISÓW LEKCJI
     # fix_actions() # USUNIĘCIE "TO " Z CZASOWNIKÓW
 
