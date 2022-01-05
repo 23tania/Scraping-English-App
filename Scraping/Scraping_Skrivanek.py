@@ -26,7 +26,6 @@ def scrape_school_subjects():
         
         if not Lesson.check_if_lesson_in_list(lesson):
             Variables.lessons_list.append(lesson)
-            print(lesson)
             # add_lesson(lesson) # DODANIE KATEGORII DO BAZY
         else:
             lesson_id = Lesson.find_lesson_id_by_name("school")
@@ -37,9 +36,4 @@ def scrape_school_subjects():
         if not Word.check_if_word_in_list(word):
             word_id+=1
             Variables.words_list.append(word)
-            print(word)
             # add_word(word) # DODANIE SŁÓWEK DO BAZY
-
-        #Variables.words_list.append(word)
-        #word_id+=1
-        # add_word(word) # DODANIE SŁÓWEK DO BAZY

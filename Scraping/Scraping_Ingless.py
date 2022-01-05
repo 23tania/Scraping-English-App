@@ -41,14 +41,12 @@ def scrape_lessons_ingless():
             if not Lesson.check_if_lesson_in_list(lesson) or Variables.is_first_scraping:
                 lesson_id+=1
                 Variables.lessons_list.append(lesson)
-                print(lesson)
                 # add_lesson(lesson) # DODANIE KATEGORII DO BAZY
             
             # TWORZENIE LISTY SŁÓWEK
             if not Word.check_if_word_in_list(word):
                 word_id+=1
                 Variables.words_list.append(word)
-                print(word)
                 # add_word(word) # DODANIE SŁÓWEK DO BAZY
 
 # SCRAPOWANIE I DODAWANIE SŁÓW DO TABELI WORDS
@@ -86,7 +84,6 @@ def scrape_words_ingless():
             if not Word.check_if_word_in_list(word):
                 word_id+=1
                 Variables.words_list.append(word)
-                print(word)
                 # add_word(word) # DODANIE SŁÓWEK DO BAZY
 
 # POPRAWIENIE KATEGORII
